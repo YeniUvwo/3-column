@@ -1,0 +1,302 @@
+body{
+    font-family: 'DM Sans', sans-serif;
+    background-color: hsl(27, 66%, 92%);
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    height: 100vh;
+    gap: 1em;
+}
+.top-box{
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    align-items: center;
+    gap: 12em;
+    margin-top: 80px;
+    background-color: hsl(10, 79%, 65%);
+    border-radius: 20px;
+    height: 90px;
+    padding: 20px;
+}
+.myBalance p{
+    margin-left: 5px;
+}
+.balance-text{
+    font-size: 0.8em;
+    margin: 5px auto 3px auto;
+    color: hsl(0, 0%, 95%);
+    font-weight: 400;
+}
+.balance-no{
+    font-size: 1.5em;
+    color: white;
+    margin: auto auto 0px auto;
+    font-weight: 700;
+}
+.image img{
+    width: 57px;
+    height: 33px;
+}
+.bottom-box{
+    background-color: hsl(0, 0%, 95%);
+    width: 377.41px;
+    height: 350px;
+    border-radius: 20px;
+    padding: 30px 25px 20px;
+}
+h1{
+    font-size: 1.4em;
+    font-weight: 700;
+    color: hsl(25, 47%, 15%);
+}
+.chart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.chart-bar{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+    gap: 1em;
+    cursor: pointer;
+    position: relative;
+}
+.bar{
+    background-color: hsl(10, 79%, 65%);
+    width: 33px;
+    border-radius: 5px;
+    position: relative;
+}
+.bar:hover{
+    background-color: hsl(10, 79%, 75%);
+}
+.bar:hover::after{
+    content: attr(price-tag);
+    position: absolute;
+    bottom: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: hsl(28, 10%, 83%);
+    padding: 5px;
+    font-size: 0.8em;
+    font-weight: 700;
+    white-space: nowrap;
+    display: block;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+.bar::after{
+    content: "";
+    display: none;
+}
+
+.bar-a{
+    height: 40px;
+}
+.bar-b{
+    height: 70px;
+}
+.bar-c{
+    height: 100px;
+    background-color: hsl(186, 34%, 60%);
+}
+.bar-c:hover{
+    background-color: hsl(186, 34%, 80%);
+}
+.bar-d{
+    height: 60px;
+}
+.bar-e{
+    height: 50px;
+}
+.bar-f{
+    height: 80px;
+}
+.bar-g{
+    height: 50px;
+}
+.labels{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    width: 327px;
+    margin-top: 3px;
+}
+.labels p{
+    font-size: 0.6em;
+    color: hsl(28, 10%, 53%);
+    width: 33px;
+    margin-bottom: 5px;
+}
+.p-a{
+    margin-left: 6px;
+}
+.p-b{
+    margin-left: 11px;
+}
+.p-c{
+    margin-left: 5px;
+}
+.p-d{
+    margin-left: 12px;
+}
+.p-e{
+    margin-left: 12px;
+}
+.p-f{
+    margin-left: 7px;
+}
+.p-g{
+    margin-left: 5px;
+}
+hr{
+    color: hsl(28, 10%, 53%);
+}
+.monthly-spend{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 7.5em;
+    margin-top: 20px;
+}
+.this-month p, .last-month p{
+    font-size: 0.7em;
+    color: hsl(28, 10%, 53%);
+    margin-bottom: 3px;
+}
+.last-month p{
+    margin-bottom: 0px;
+}
+h2{
+    font-size: 2em;
+    font-weight: 700;
+    color: hsl(25, 47%, 15%);
+}
+h3{
+    font-size: 0.8em;
+    font-weight: 700;
+    color: hsl(25, 47%, 15%);
+    text-align: right;
+    margin-bottom: 3px;
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+ 
+
+@media (max-width: 650px){
+    .main{
+        height: 100%;
+    }
+    .top-box{
+        gap: 7em;
+        margin-top: 50px;
+        border-radius: 10px;
+        height: 75px;
+        padding: 10px;
+    }
+    .balance-text{
+        font-size: 0.7em;
+        margin: 0px auto 0px auto;
+    }
+    .balance-no{
+        font-size: 1.15em;
+        color: white;
+        margin: auto auto 0px auto;
+        font-weight: 700;
+    }
+    .image img{
+        width: 52px;
+        height: 28px;
+    }
+    .bottom-box{
+        width: 256.1px;
+        height: 310px;
+        border-radius: 10px;
+        padding: 20px 15px 10px;
+    }
+    h1{
+        font-size: 1.1em;
+    }
+    .chart-bar{
+        gap: 0.5em;
+    }
+    .bar{
+        width: 23px;
+        border-radius: 3px;
+    }
+    .bar:hover::after{
+        padding: 3px;
+        font-size: 0.5em;
+        font-weight: 700;
+        border-radius: 3px;
+    }
+    .labels{
+        gap: 0.1em;
+        width: 256px;
+        margin-top: 5px;
+    }
+    .labels p{
+        font-size: 0.5em;
+        width: 20px;
+        margin-bottom: 5px;
+    }
+    .p-a{
+        margin-left: 7px;
+    }
+    .p-b{
+        margin-left: 12px;
+    }
+    .p-c{
+        margin-left: 10px;
+    }
+    .p-d{
+        margin-left: 10px;
+    }
+    .p-e{
+        margin-left: 12px;
+    }
+    .p-f{
+        margin-left: 7px;
+    }
+    .p-g{
+        margin-left: 8px;
+    }
+    .monthly-spend{
+        gap: 4em;
+        margin-top: 10px;
+    }
+    .this-month p, .last-month p{
+        font-size: 0.65em;
+        color: hsl(28, 10%, 53%);
+        margin-bottom: 3px;
+    }
+    h2{
+        font-size: 1.3em;
+    }
+    h3{
+        font-size: 0.75em;
+        margin-bottom: 0px;
+    }
+    .attribution { 
+        font-size: 11px; 
+        text-align: center; 
+        margin-top: 200px;
+    }
+}
